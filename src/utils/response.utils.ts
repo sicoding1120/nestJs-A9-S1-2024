@@ -1,22 +1,22 @@
-export  class BaseResponse {
-    _success(message:string, data?:any): ResponseSuccess {
+export class BaseResponse {
+    _success(message: string, data?: any): ResponseSuccess {
         return {
-            status: "ok",
+            status: "Success",
             message: message,
             data: data
         }
     }
 
-    _pagination(massage:string, data:any,total:number, page:number, pageSize:number): ResponsePagination {
+    _pagination(message: string, data: any, total: number, page: number, pageSize: number): ResponsePagination {
         return {
-            status: "ok",
-            message: massage,
+            status: "Success",
+            message: message,
             data: data,
             pagination: {
                 total: total,
                 page: page,
                 pageSize: pageSize,
-                totalPage : Math.ceil(total / pageSize)
+                totalPage: Math.ceil(total / pageSize)
             }
         }
     }

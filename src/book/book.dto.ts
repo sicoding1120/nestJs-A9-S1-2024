@@ -21,7 +21,7 @@ export class BookDTO {
     year: number
 
     @IsNotEmpty()
-    desckripsi: string
+    description: string
 
     @IsOptional()
     @IsInt()
